@@ -20,12 +20,7 @@ function MyApp({ Component, pageProps }) {
       }}
     >
       <NotificationsProvider>
-        <SessionContextProvider
-          supabaseClient={supabase}
-          initialSession={pageProps.initialSession}
-        >
-          <Component {...pageProps} />
-        </SessionContextProvider>
+        <Component {...pageProps} />
       </NotificationsProvider>
     </MantineProvider>
   );
